@@ -1,0 +1,28 @@
+#N canvas 132 687 441 267 10;
+#X obj 289 112 tabread sequence;
+#X obj 289 54 float;
+#X obj 289 25 inlet beat;
+#X obj 342 54 + 1;
+#X obj 289 83 mod 8;
+#X obj 289 168 mtof;
+#X floatatom 318 200 5 0 0 0 - - -, f 5;
+#X obj 289 227 outlet frequency;
+#X obj 253 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 289 141 int;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array sequence 8 float 3;
+#A 0 31.7501 39.9144 0 37.1931 0.457146 46.2645 28.1214 0;
+#X coords 0 127 7 0 200 140 1 0 0;
+#X restore 29 68 graph;
+#X connect 0 0 9 0;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 2 0 8 0;
+#X connect 3 0 1 1;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 9 0 5 0;
+#X coords 0 -1 1 1 220 180 1 20 35;

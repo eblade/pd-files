@@ -1,5 +1,5 @@
-#N canvas 198 143 774 685 10;
-#N canvas 1445 751 450 300 metronome 1;
+#N canvas 54 507 774 685 10;
+#N canvas 1443 766 450 300 metronome 0;
 #X obj 124 45 inlet float;
 #X obj 97 129 metro;
 #X msg 60 45 bang;
@@ -11,6 +11,7 @@
 #X floatatom 171 148 5 0 0 0 ms - -;
 #X obj 38 161 bng 15 250 50 0 empty empty beat 17 7 0 10 -262144 -1
 -1;
+#X obj 99 15 receive global_metro;
 #X connect 0 0 5 0;
 #X connect 1 0 4 0;
 #X connect 1 0 9 0;
@@ -20,11 +21,12 @@
 #X connect 6 0 7 0;
 #X connect 7 0 1 1;
 #X connect 7 0 8 0;
+#X connect 10 0 1 0;
 #X restore 132 82 pd metronome;
 #X obj 106 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 4;
+-1 -1 0;
 #X obj 86 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 4;
+-1 0;
 #X obj 132 108 float;
 #X obj 187 108 + 1;
 #X obj 132 143 mod 8;
@@ -37,9 +39,9 @@
 #X floatatom 99 487 5 0 0 0 - - -;
 #X obj 138 575 mtof;
 #X obj 190 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 5;
+-1 -1 0;
 #X obj 170 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+-1 -1 0;
 #X obj 141 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 156 415 * 12;
@@ -47,9 +49,9 @@
 #X obj 141 487 float;
 #X floatatom 183 487 5 0 0 0 - - -;
 #X obj 273 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 4;
+-1 -1 0;
 #X obj 253 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X obj 224 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 239 415 * 12;
@@ -57,9 +59,9 @@
 #X obj 224 487 float;
 #X floatatom 266 487 5 0 0 0 - - -;
 #X obj 356 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 2;
+-1 -1 0;
 #X obj 336 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X obj 307 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 322 415 * 12;
@@ -67,9 +69,9 @@
 #X obj 307 487 float;
 #X floatatom 349 487 5 0 0 0 - - -;
 #X obj 441 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 3;
+-1 -1 0;
 #X obj 421 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 0;
 #X obj 392 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 407 415 * 12;
@@ -77,9 +79,9 @@
 #X obj 392 487 float;
 #X floatatom 434 487 5 0 0 0 - - -;
 #X obj 526 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 4;
+-1 -1 0;
 #X obj 506 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 0;
 #X obj 477 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 492 415 * 12;
@@ -87,9 +89,9 @@
 #X obj 477 487 float;
 #X floatatom 519 487 5 0 0 0 - - -;
 #X obj 611 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 4;
+-1 -1 0;
 #X obj 591 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X obj 562 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 577 415 * 12;
@@ -97,9 +99,9 @@
 #X obj 562 487 float;
 #X floatatom 604 487 5 0 0 0 - - -;
 #X obj 698 252 vradio 15 1 0 12 empty empty empty 0 -8 0 10 -257985
--1 -1 3;
+-1 -1 0;
 #X obj 678 252 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X obj 649 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 664 415 * 12;
@@ -201,3 +203,4 @@
 #X connect 64 0 41 0;
 #X connect 64 0 48 0;
 #X connect 64 0 55 0;
+#X coords 0 -1 1 1 670 210 1 50 230;
