@@ -1,2 +1,6 @@
-minus 1;
+minus 102;
 plus 1;
+a 96;
+d 47;
+s 67;
+r 44;
